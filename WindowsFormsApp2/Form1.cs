@@ -32,6 +32,7 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // calculating the series resistance
             double r1, r2, r3, r4, r5, seriesTotal, parallelTotal;
             try
             {
@@ -76,6 +77,8 @@ namespace WindowsFormsApp2
             }
             seriesTotal = r1 + r2 + r3 + r4 + r5;
             label1.Text = "Series Total = " + seriesTotal;
+            
+            // calculating the parallel resistance
             if (r1 == 0)
             {
                 r1 = double.PositiveInfinity;
